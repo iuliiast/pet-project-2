@@ -1,0 +1,232 @@
+* {
+	margin: 0;
+}
+body {
+	background-color: #93d97b;
+	font-family: 'Balsamiq Sans', 'Poppins', sans-serif;
+	background-image: url('/assets/images/grass.jpg');
+	background-size: cover;
+	background-position: center;
+}
+h1 {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	font-size: 3.125rem;
+	font-weight: 700;
+	line-height: normal;
+	text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa,
+		0 0 151px #0fa;
+	text-transform: uppercase;
+	line-height: 1;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+h1:hover {
+	color: #ffbb00; /* Меняем цвет текста */
+	-webkit-text-shadow: 2px 2px 2px #000;
+	-moz-text-shadow: 2px 2px 2px #000;
+	text-shadow: 2px 2px 2px #000;
+}
+.open {
+	margin-bottom: 2rem;
+	font-size: 1.375rem;
+	text-align: center;
+	font-weight: 700;
+	line-height: normal;
+	text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa,
+		0 0 151px #0fa;
+}
+.hod {
+	text-align: left;
+	font-size: 1.4375rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa,
+		0 0 151px #0fa;
+}
+.return {
+	text-align: right;
+	font-size: 1.3125rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa,
+		0 0 151px #0fa;
+}
+.container {
+	width: 100%;
+	height: 100vh;
+	/* background-image: url('/assets/images/grass.jpg');
+	background-size: cover;
+	background-position: center; */
+	display: flex;
+}
+.main {
+	margin: 0 auto;
+	max-width: 623px;
+	width: 100%;
+	height: 100%;
+}
+.game {
+	margin-top: 20px;
+	background-color: #f8ffae;
+	border-radius: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.game-cards {
+	margin: 5%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.default-card {
+	margin: 5px;
+	/* width: 30%; */
+	max-height: 100px;
+	padding: 10px;
+	background-color: #ffd27c;
+	border-radius: 9px;
+}
+.settings {
+	display: flex;
+	top: 15.88rem;
+	justify-content: space-between;
+}
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* background-color: rgba(0, 0, 0, 0.4); */
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+}
+.congratulations {
+	display: none;
+	gap: 20px;
+	flex-direction: column;
+	align-items: center;
+	font-size: 32px;
+	font-color: white;
+	background-color: #e0f2e0;
+	border: 4px solid green;
+	padding: 30px 70px;
+	border-radius: 10px;
+	text-align: center;
+}
+.congratulations p {
+	width: max-content;
+}
+.congratulations img {
+	width: 90px;
+}
+.start-again_btn {
+	margin-top: 20px;
+	border-radius: 10px;
+	text-decoration: none;
+	cursor: pointer;
+	border: 4px solid green;
+	padding: 8px 15px;
+}
+.start-again_btn:hover {
+	background-color: #5fb55e;
+}
+img {
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+img:hover {
+	-webkit-transform: rotate(10deg); /* Градусы поворота можно изменить по необходимости */
+	transform: rotate(10deg); /* Градусы поворота можно изменить по необходимости */
+}
+@media screen and (min-width: 1025px) {
+	.container {
+		width: 100%;
+		background-size: contain;
+		display: flex;
+		align-items: center;
+	}
+	.main {
+		margin: 0 auto;
+		max-width: 623px;
+		width: 100%;
+		height: min-content;
+	}
+}
+@media screen and (min-width: 451px) and (max-width: 1024px) {
+	h1 {
+		font-size: 2.125rem;
+	}
+	.open {
+		font-size: 1.4rem;
+	}
+	.container {
+		width: 100%;
+		background-size: contain;
+	}
+	.main {
+		max-width: 500px;
+	}
+	.default-card {
+		height: 80px;
+	}
+	.congratulations {
+		width: 80%;
+		padding: 1rem;
+	}
+}
+@media screen and (min-width: 375px) and (max-width: 500px) {
+	.container {
+		width: 100%;
+		height: -webkit-fill-available;
+		background-size: contain;
+	}
+	.main {
+		max-width: 400px;
+	}
+	.default-card {
+		height: 50px;
+	}
+	.congratulations {
+		width: 80%;
+		padding: 1rem;
+	}
+	.congratulations > p {
+		font-size: 20px;
+	}
+	.congratulations button {
+		width: auto;
+	}
+}
+@media screen and (max-width: 375px) {
+	.main {
+		max-width: 90%;
+	}
+	.game-cards {
+		width: 100%;
+	}
+	.default-card {
+		max-width: 15%;
+	}
+	.congratulations {
+		width: 80%;
+		padding: 1rem;
+		gap: 10px;
+	}
+	.congratulations > p {
+		font-size: 20px;
+	}
+	.congratulations button {
+		width: auto;
+		font-size: 1rem;
+	}
+}
+
